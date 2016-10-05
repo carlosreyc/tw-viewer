@@ -72,4 +72,14 @@ $(document).ready(function(){
       $("#status-12").html(json.streams[0].channel.status);
       $("#viewers-12").html('Viewers:'+json.streams[0].viewers);    }
   });
+  $("div.online").hover(function(){
+    $(this).html('Online').addClass('hover');
+  }, function(){
+    $(this).html('On').removeClass('hover');
+  });
+  $("div.offline").hover(function(){
+    $(this).html('Offline').addClass('hover');
+  }, function(){
+    $(this).html('On').removeClass('hover');
+  });
 });
