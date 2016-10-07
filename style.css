@@ -1,6 +1,8 @@
 body {
   background: rgb(0, 0, 0);
   color: white;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12px;
 }
 
 .wrapper-banner {
@@ -8,7 +10,7 @@ body {
   background: rgb(255, 0, 0);
   position: relative;
   margin-top: 10px;
-  height: 70px;
+  height: 90px;
   justify-content: center;
   align-items: center;
 }
@@ -41,6 +43,9 @@ body {
 
 .online {
   position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   width: 20px;
   height: 20px;
   bottom: 30px;
@@ -52,6 +57,9 @@ body {
 
 .offline {
   position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   width: 20px;
   height: 20px;
   bottom: 10px;
@@ -61,6 +69,33 @@ body {
   cursor: pointer;
 }
 
+.all {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 20px;
+  height: 20px;
+  bottom: 50px;
+  right: 0;
+  cursor: hand;
+  cursor: pointer;
+  background-color: rgb(210, 113, 36)
+}
+
+.circulo {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 auto;
+}
+.active, .selector:hover{
+  width: 45px;
+  transition: width 0.2s linear;
+  cursor: pointer;
+}
 .hover {
 
   width: 42px;
@@ -69,4 +104,17 @@ body {
   background: rgb(0, 232, 255);
   cursor: hand;
   cursor: pointer;
+}
+
+.all > .circulo {
+  background-color: #000;
+  margin: 0 auto;
+}
+.online > .circulo {
+  background-color: #00ff00;
+  margin: 0 auto;
+}
+
+h3 {
+  text-align: left;
 }
