@@ -110,35 +110,34 @@ $(document).ready(function(){
     $("#status-12").addClass('off');
   }
   });
-    $("div.online").click(function(){
-    $(this).html('<div class="circulo"></div><p>ON</p>');
+
+
+
+  $("div.online").click(function(){
     $(".off").parent().hide();
-    $("div.offline").removeClass('active');
-    $("div.all").removeClass('active');
-    $(this).addClass('active');
-      });
-      
-  $("div.online").hover(
-    function(){
-      $(this).html('<div class="circulo"></div><p>ON</p>');
-    }, function() {
-      $(this).html('<div class="circulo"></div><p></p>');
-    });
-
-
-
+  });
 
   $("div.offline").click(function(){
     $(".on").parent().hide();
-    $(this).addClass('active');
-    $("div.all").removeClass('active');
-    $("div.online").removeClass('active');
+
   });
   $("div.all").click(function(){
     $(".on").parent().show();
     $(".off").parent().show();
-    $("div.online").removeClass('active');
-    $("div.offline").removeClass('active');
-    $(this).addClass('active');
+
   });
+
+(function(){ // Menu FUNCIONANDO!!
+  var clicked_btn = '';
+  $('.selector').click(function(){
+    clicked_btn = $(this);
+    clicked_btn.css('width','45px');
+    $('.selector').not(this).css('width','20px');
+  });
+  $('.selector').hover(function(){
+    $(this).css('width','45px');
+  }, function(){
+    $('.selector').not(clicked_btn).css('width','20px');
+  });
+})();
 });

@@ -1,5 +1,5 @@
 body {
-  background: rgb(0, 0, 0);
+  background: rgb(190, 186, 185);
   color: white;
   font-family: 'Ubuntu', sans-serif;
   font-size: 12px;
@@ -7,7 +7,7 @@ body {
 
 .wrapper-banner {
   display: flex;
-  background: rgb(255, 0, 0);
+  background: rgb(130, 123, 123);
   position: relative;
   margin-top: 10px;
   height: 90px;
@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  background: #50a373;
+  background: #1e2220;
   justify-content: space-around;
   align-items: center;
   margin-top: 5px;
@@ -27,17 +27,17 @@ body {
 }
 
 .title {
-  background: rgb(143, 34, 34);
+
   width: 102px;
 }
 
 .status {
-  background: rgb(205, 28, 113);
+
   width: 440px;
 }
 
 .viewers {
-  background: rgb(32, 25, 2);
+
   width: 95px;
 }
 
@@ -46,11 +46,10 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  width: 20px;
-  height: 20px;
+
   bottom: 30px;
   right: 0;
-  background: rgb(0, 232, 255);
+
   cursor: hand;
   cursor: pointer;
 }
@@ -60,11 +59,10 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  width: 20px;
-  height: 20px;
+
   bottom: 10px;
   right: 0;
-  background: rgb(0, 232, 255);
+
   cursor: hand;
   cursor: pointer;
 }
@@ -75,13 +73,12 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: 20px;
-  height: 20px;
+
   bottom: 50px;
   right: 0;
   cursor: hand;
   cursor: pointer;
-  background-color: rgb(210, 113, 36)
+
 }
 
 .circulo {
@@ -91,19 +88,27 @@ body {
   background-color: #fff;
   margin: 0 auto;
 }
-.active, .selector:hover{
+.selector:hover{
   width: 45px;
   transition: width 0.2s linear;
   cursor: pointer;
-}
-.hover {
 
-  width: 42px;
+}
+.active, .active:hover{
+
+  width: 45px;
   height: 20px;
 
-  background: rgb(0, 232, 255);
+  background: rgb(130, 123, 123);
   cursor: hand;
   cursor: pointer;
+  transition: width 0.4s linear;
+}
+.selector {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(130, 123, 123);
+  transition: width 0.4s linear;
 }
 
 .all > .circulo {
@@ -114,7 +119,19 @@ body {
   background-color: #00ff00;
   margin: 0 auto;
 }
+.offline > .circulo {
+  background-color: #ff0000;
+}
 
 h3 {
   text-align: left;
+}
+.all:hover:after {
+  content: 'ALL';
+}
+.online:hover:after {
+  content: 'ON';
+}
+.offline:hover:after {
+  content: 'OFF';
 }
